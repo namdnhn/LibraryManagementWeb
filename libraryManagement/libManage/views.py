@@ -7,4 +7,5 @@ def index(request):
     # response.writelines('<h1>Hello</h1>')
     # response.write('This is library management app')
     # return response
+    # return render
     return render(request, 'pages/base.html')
