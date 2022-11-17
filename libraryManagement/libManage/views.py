@@ -1,6 +1,8 @@
 from django.shortcuts import render
-from django.http import HttpResponse, Http404, HttpResponseRedirect
+from django.http import HttpResponse, Http404
 from .models import Post
+from .forms import RegistrationForm
+from django.http import HttpResponseRedirect 
 
 # Create your views here.
 def index(request):
@@ -20,3 +22,12 @@ def post(request, id):
     except Post.DoesNotExist:
         raise Http404("Bai viet khong ton tai")
     return render(request, 'blog/post.html', {'post': post})
+
+def register(request):
+    form = RegistrationForm()
+    if request.method == 'POST':
+        form = RegistrationForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return HttpResponseRedirect('/')
+    return render(request, 'pages/register.html', {'form': form})
