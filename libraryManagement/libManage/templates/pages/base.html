@@ -46,9 +46,23 @@
               <li><a class="dropdown-item" href="#">Đề thi</a></li>
             </ul>
           </li>
-          <a href="blog/login">
-              <button class="btn btn-outline-success me-2" type="button">Đăng nhập</button>
-          </a>
+            {% if user.username %}
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Hello, {{user.username}}
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#">Thông tin cá nhân</a></li>
+                  <li><a class="dropdown-item" href="#">Đổi mật khẩu</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="logout/">Đăng xuất</a></li>
+                </ul>
+              </li>           
+            {% else %}
+              <a href="blog/login">
+                <button class="btn btn-outline-success me-2" type="button">Đăng nhập</button>
+              </a>
+            {% endif %}
         </ul>
         <form class="d-flex">
           <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">

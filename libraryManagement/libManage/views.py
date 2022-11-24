@@ -3,14 +3,10 @@ from django.http import HttpResponse, Http404
 from .models import Post
 from .forms import RegistrationForm
 from django.http import HttpResponseRedirect 
+from django.contrib.auth.mixins import LoginRequiredMixin
 
 # Create your views here.
 def index(request):
-    # response = HttpResponse()
-    # response.writelines('<h1>Hello</h1>')
-    # response.write('This is library management app')
-    # return response
-    # return render
     return render(request, 'pages/base.html')
 
 def list(request):
