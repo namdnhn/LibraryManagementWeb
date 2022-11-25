@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import redirect, render
 from django.http import HttpResponse, Http404
 from .models import Post
 from .forms import RegistrationForm
@@ -21,10 +21,10 @@ def post(request, id):
     return render(request, 'blog/post.html', {'post': post})
 
 def register(request):
-    form = RegistrationForm()
     if request.method == 'POST':
         form = RegistrationForm(request.POST)
         if form.is_valid():
             form.save()
-            return HttpResponseRedirect('/')
+            return redirect('')
+    form = RegistrationForm()
     return render(request, 'pages/register.html', {'form': form})
