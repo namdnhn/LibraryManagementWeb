@@ -8,8 +8,8 @@ class PostAdmin(admin.ModelAdmin):
     search_fields = ['title']
 
 class BookAdmin(admin.ModelAdmin):
-    list_display = ['title', 'publisher', 'author_name', 'description']
-    list_filter = ['id']
+    list_display = ['title', 'publisher', 'genre', 'author_name', 'description']
+    list_filter = ['id', 'title', 'genre']
     search_fields = ['title', 'publisher', 'author_name']
 
 class BookCopiesAdmin(admin.ModelAdmin):

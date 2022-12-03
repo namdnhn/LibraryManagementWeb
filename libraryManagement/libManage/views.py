@@ -1,6 +1,6 @@
 from django.shortcuts import redirect, render
 from django.http import HttpResponse, Http404
-from .models import Post
+from .models import Post, Book
 from .forms import RegistrationForm
 from django.http import HttpResponseRedirect 
 from django.contrib.auth.mixins import LoginRequiredMixin
@@ -28,3 +28,10 @@ def register(request):
             return redirect('/login')
     form = RegistrationForm()
     return render(request, 'pages/register.html', {'form': form})
+
+def bookpage(request):
+    try:
+        book = Book.objects.get(id=id)
+    except Post.DoesNotExist:
+        raise Http404("Sach khong ton tai")
+    return render(request, 'blog/bookshowing.html', {'book': book})

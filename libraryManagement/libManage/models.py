@@ -22,6 +22,7 @@ class Book(models.Model):
     id = models.AutoField(primary_key=True)
     title = models.CharField(max_length=100)
     publisher = models.ForeignKey(Publisher, on_delete=models.CASCADE)
+    genre = models.CharField(max_length=20)
     author_name = models.CharField(max_length = 30)
     description = models.TextField()
 
@@ -29,7 +30,7 @@ class Book(models.Model):
         return self.title
 
 class BookCopies(models.Model):
-    book = models.ForeignKey(Book, on_delete=models.CASCADE, primary_key=True)
+    book = models.ForeignKey(Book, on_delete=models.CASCADE, unique=True, primary_key=True)
     copynum = models.IntegerField()
     branch = models.CharField(max_length=10)
 
@@ -41,7 +42,7 @@ class Borrowed(models.Model):
     borrowDate = models.DateTimeField(auto_now_add=True)
 
 class UserInformation(models.Model):
-    user = models.ForeignKey(User, on_delete=models.CASCADE, primary_key=True)
+    user = models.ForeignKey(User, on_delete=models.CASCADE, unique=True, primary_key=True)
     fullname = models.CharField(max_length=40)
     SEX = (
         ('M', 'Male'),
