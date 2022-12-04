@@ -1167,3 +1167,20 @@ section {
   color: #209f64;
   content: "/";
 }
+
+.cart {
+  padding-top: 40px;
+  background-color: #3c3e3f;
+}
+
+.cart h1 {
+  color: #ddd;
+}
+
+.cart th {
+  color: #ddd;
+}
+
+.cart td {
+  color: #ddd;
+}
