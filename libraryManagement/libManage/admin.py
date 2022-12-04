@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Post, Book, BookCopies, UserInformation
+from .models import Post, Book, BookCopies, UserInformation, Publisher
 
 # Register your models here.
 class PostAdmin(admin.ModelAdmin):
@@ -8,7 +8,7 @@ class PostAdmin(admin.ModelAdmin):
     search_fields = ['title']
 
 class BookAdmin(admin.ModelAdmin):
-    list_display = ['title', 'publisher', 'genre', 'author_name', 'description']
+    list_display = ['id', 'title', 'publisher', 'genre', 'author_name', 'description', 'price', 'img']
     list_filter = ['id', 'title', 'genre']
     search_fields = ['title', 'publisher', 'author_name']
 
@@ -21,7 +21,12 @@ class UserInfoAdmin(admin.ModelAdmin):
     list_display = ['user', 'fullname', 'birth_date', 'phone_number', 'address']
     search_fields = ['user']
 
+class PublisherAdmin(admin.ModelAdmin):
+    list_display = ['id', 'name', 'address', 'phone']
+    search_fields = ['name']
+
 admin.site.register(Post, PostAdmin)
 admin.site.register(Book, BookAdmin)
 admin.site.register(BookCopies, BookCopiesAdmin)
 admin.site.register(UserInformation, UserInfoAdmin)
+admin.site.register(Publisher, PublisherAdmin)

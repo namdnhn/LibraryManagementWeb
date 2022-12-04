@@ -10,9 +10,9 @@ from django.contrib.auth import authenticate, login
 def index(request):
     return render(request, 'pages/base.html')
 
-def list(request):
-    Data = {'Posts': Post.objects.all().order_by('-date')}
-    return render(request, 'blog/blog.html', Data)
+# def list(request):
+#     Data = {'Posts': Post.objects.all().order_by('-date')}
+#     return render(request, 'blog/blog.html', Data)
 
 def post(request, id):
     try:
@@ -36,9 +36,9 @@ def register(request):
         form = RegistrationForm()
     return render(request, 'pages/register.html', {'form': form})
 
-def bookpage(request):
+def bookpage(request, id):
     try:
         book = Book.objects.get(id=id)
-    except Post.DoesNotExist:
+    except Book.DoesNotExist:
         raise Http404("Sach khong ton tai")
     return render(request, 'pages/bookshowing.html', {'book': book})
