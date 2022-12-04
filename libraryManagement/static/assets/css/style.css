@@ -1,5 +1,5 @@
 /**
-* Template Name: Arsha - v4.9.1
+78* Template Name: Arsha - v4.9.1
 * Template URL: https://bootstrapmade.com/arsha-free-bootstrap-html-template-corporate/
 * Author: BootstrapMade.com
 * License: https://bootstrapmade.com/license/
@@ -14,12 +14,12 @@ body {
 }
 
 a {
-  color: #47b2e4;
+  color: #ddd;
   text-decoration: none;
 }
 
 a:hover {
-  color: #73c5eb;
+  color: #209f64;
   text-decoration: none;
 }
 
@@ -659,6 +659,7 @@ section {
 }
 .portfolio-details {
   padding-top: 40px;
+  background-color: #3c3e3f;
 }
 
 .portfolio-details .portfolio-details-slider img {
@@ -675,11 +676,11 @@ section {
   height: 12px;
   background-color: #fff;
   opacity: 1;
-  border: 1px solid #47b2e4;
+  border: 1px solid #209f64;
 }
 
 .portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet-active {
-  background-color: #47b2e4;
+  background-color: #209f64;
 }
 
 .portfolio-details .portfolio-info {
@@ -693,30 +694,137 @@ section {
   margin-bottom: 20px;
   padding-bottom: 20px;
   border-bottom: 1px solid #eee;
+  color: #ddd;
 }
 
 .portfolio-details .portfolio-info ul {
   list-style: none;
   padding: 0;
   font-size: 15px;
+  color: #ddd;
 }
 
 .portfolio-details .portfolio-info ul li+li {
   margin-top: 10px;
+  color: #ddd;
 }
 
 .portfolio-details .portfolio-description {
   padding-top: 30px;
+  color: #ddd;
 }
 
 .portfolio-details .portfolio-description h2 {
   font-size: 26px;
   font-weight: 700;
   margin-bottom: 20px;
+  color: #ddd;
 }
 
 .portfolio-details .portfolio-description p {
   padding: 0;
+  color: #ddd;
+}
+
+.product-content-left {
+  width: 800px;
+
+}
+
+.product-content-left-big-img {
+  width: 800px;
+  padding-right: 20px;
+}
+
+.product-content-left-big-img img {
+  width: 800px;
+}
+
+/*--------------------------------------------------------------
+# Quantity
+--------------------------------------------------------------*/
+.quantity {
+  display: flex;
+  margin-bottom: 20px;
+  margin: 0 12px;
+}
+
+.quantity input {
+  width: 40px;
+  height: 25px;
+  padding-left: 3px;
+  margin-right: 10px;
+  margin-left: 5px;
+}
+
+/*--------------------------------------------------------------
+# Button
+--------------------------------------------------------------*/
+
+
+.product-content-right-book-button button {
+  width: 125px;
+  height: 30px;
+  display: block;
+  margin: 20px 0 12px;
+  transition: all 0.3s ease;
+  font-family: var(--main-text-font);
+  border-radius: 8px;
+}
+
+.product-content-right-book-button button:first-child {
+  margin: 0 12px;
+  display: flex;
+  justify-content: space-evenly;
+  background-color: aquamarine;
+  border: 2px solid black;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.product-content-right-book-button button:first-child:hover {
+  background-color: rgb(166, 76, 85);
+  color: #cccccc;
+}
+
+.product-content-right-bottom {
+  margin: 15px 12px;
+  padding-top: 40px;
+  border-top: 1px solid #dddd;
+  position: relative;
+}
+
+.product-content-right-bottom-top {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border: 1px solid #ddd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  top: -15px;
+  left: 50%;
+  border-radius: 50%;
+  transform: translateX(-50%);
+}
+
+.product-content-right-bottom-content-tilte {
+  border-bottom: 2px solid #dddd;
+}
+.product-content-right-bottom-content-tilte-item {
+  padding: 6px;
+  cursor: pointer;
+  margin-right: 6px;
+}
+.product-content-right-bottom-content {
+  padding-top: 30px;
+}
+.product-content-right-bottom-content-tilte-item p {
+  font-family: var(--main-text-font);
+  font-size: 16px;
+  color: bisque;
+
 }
 
 /*--------------------------------------------------------------
@@ -1014,4 +1122,48 @@ section {
   #footer .credits {
     padding-top: 4px;
   }
+}
+
+/*--------------------------------------------------------------
+# Breadcrumbs
+--------------------------------------------------------------*/
+.breadcrumbs {
+  padding: 30px 0;
+  background: #212425;
+  min-height: 40px;
+  margin-top: 72px;
+}
+
+@media (max-width: 992px) {
+  .breadcrumbs {
+    margin-top: 68px;
+  }
+}
+
+.breadcrumbs h2 {
+  font-size: 36px;
+  font-weight: 600;
+  color: #ddd;
+  margin-bottom: auto;
+}
+
+.breadcrumbs ol {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0 0 10px 0;
+  margin: 0;
+  font-size: 16px;
+}
+
+.breadcrumbs ol li+li {
+  padding-left: 10px;
+  color: rgb(133, 133, 133);
+}
+
+.breadcrumbs ol li+li::before {
+  display: inline-block;
+  padding-right: 10px;
+  color: #209f64;
+  content: "/";
 }
