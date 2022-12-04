@@ -59,28 +59,14 @@
             </ul>
           </li>
 
-          {% if user.username %}
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Hello, {{user.username}}
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="#">Thông tin cá nhân</a></li>
-                  <li><a class="dropdown-item" href="#">Đổi mật khẩu</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="logout/">Đăng xuất</a></li>
-                </ul>
-              </li>           
-            {% else %}
-              <a href="blog/login">
-                <button class="btn btn-outline-success me-2" type="button">Đăng nhập</button>
-              </a>
-            {% endif %}
+          <a href="blog/login">
+            <button class="btn btn-outline-success me-2" type="button">Đăng nhập</button>
+          </a>
 
           <form class="d-flex">
             <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
             <button class="btn btn-outline-success me-2" type="button">
-                <img src="{% static 'des/search.png' %}" alt="" width="22" height="22"
+                <img src="{%static 'des/search.png' %}" alt="" width="22" height="22"
                     class="d-inline-block align-text-top">
             </button>
             </button>
@@ -95,79 +81,107 @@
   </header><!-- End Header -->
 
   <main id="main">
-    <a name = "book"></a>
+
     <!-- ======= Breadcrumbs ======= -->
     <section id="breadcrumbs" class="breadcrumbs">
       <div class="container">
 
         <ol>
           <li><a href="home">Trang chủ</a></li>
-          <li>Tên sách</li>
+          <li>Giỏ sách</li>
         </ol>
-        <h2>Tên sách</h2>
+        <h2>Giỏ sách</h2>
 
       </div>
     </section><!-- End Breadcrumbs -->
 
-    <!-- ======= Portfolio Details Section ======= -->
-    <section id="portfolio-details" class="portfolio-details">
-      <div class="container">
 
-        <div class="row gy-4">
-
-          <div class="col-lg-8">
-            <div class="product-content-left row">
-              <div class="product-content-left-big-img">
-                  <img src="{% static'assets/img/portfolio/3.jpg' %}" alt="">
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4">
-            <div class="portfolio-info">
-              <h3>Thông tin sách: </h3>
-              <ul>
-                <li><strong>Thể loại</strong>: Đei nà thể loại nhó</li>
-                <li><strong>Nhà xuất bản</strong>: xxx</li>
-                <li><strong>Tác giả</strong>: xxx</li>
-                <li><strong>Giá thuê/ngày</strong>: xxx</li>
-              </ul>
-            </div>
-
-            <div class="quantity">
-              <p style="font-weight: bold; color: #ddd;">Số lượng :</p>
-              <input type="number" min="0" value="1">
-              <p style="color: #ddd;"> <i>Còn ... quyển trong thư viện</i></p>
-            </div>
-            <div class="product-content-right-book-button">
-              <button>
-                  <p>MƯỢN SÁCH</p>
-              </button>
-            </div>
-
-            <div class="product-content-right-bottom">
-              <div class="product-content-right-bottom-top">
-                  &#8744;
-              </div>
-              <div class="product-content-right-bottom-content-pig">
-                  <div class="product-content-right-bottom-content-tilte row">
-                      <div class="product-content-right-bottom-content-tilte-item col-sm gioithieu">
-                          <h3 style="color: #ddd;">Giới thiệu</h3>
-                      </div>
-                  </div>
-                  <div class="product-content-right-bottom-content">
-                      <div class="product-content-right-bottom-content-gioithieu" style = "color: #ddd;">
-                          Viết giới thịu sương sương ợ đei nhaaaa :>
-                      </div>
-                  </div>
-              </div>
-            </div>
-          </div>
-
+    <!-- List -->
+    <section class="cart">
+      <div class="container mt-4">
+        <div id="thongbao" class="alert alert-danger d-none face" role="alert">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">×</span>
+            </button>
         </div>
-
+  
+        <h1 class="text-center">Giỏ sách</h1>
+        <div class="row">
+            <div class="col col-md-12">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>STT</th>
+                            <th>Ảnh đại diện</th>
+                            <th>Tên sản phẩm</th>
+                            <th>Số lượng</th>
+                            <th>Đơn giá</th>
+                            <th>Thành tiền</th>
+                            <th>Hành động</th>
+                        </tr>
+                    </thead>
+                    <tbody id="datarow">
+                        <tr>
+                            <td>1</td>
+                            <td>
+                                <img src="../giaodien/img/anh.png" class="hinhdaidien">
+                            </td>
+                            <td>Apple Ipad 4 Wifi 16GB</td>
+                            <td class="text-right">2</td>
+                            <td class="text-right">11,800,000.00</td>
+                            <td class="text-right">23,600,000</td>
+                            <td>
+                                <!-- Nút xóa, bấm vào sẽ xóa thông tin dựa vào khóa chính `sp_ma` -->
+                                <a id="delete_1" data-sp-ma="2" class="btn btn-danger btn-delete-sanpham">
+                                    <i class="fa fa-trash" aria-hidden="true"></i> Xóa
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>
+                                <img src="../giaodien/img/anh2.png" class="hinhdaidien">
+                            </td>
+                            <td>Nokia Asha 311</td>
+                            <td class="text-right">4</td>
+                            <td class="text-right">2,699,000.00</td>
+                            <td class="text-right">1,0796,000</td>
+                            <td>
+                                <!-- Nút xóa, bấm vào sẽ xóa thông tin dựa vào khóa chính `sp_ma` -->
+                                <a id="delete_2" data-sp-ma="6" class="btn btn-danger btn-delete-sanpham">
+                                    <i class="fa fa-trash" aria-hidden="true"></i> Xóa
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>
+                                <img src="../giaodien/img/anh2.png" class="hinhdaidien">
+                            </td>
+                            <td>Apple iPhone 5 16GB White</td>
+                            <td class="text-right">8</td>
+                            <td class="text-right">1,4990,000.00</td>
+                            <td class="text-right">119,920,000</td>
+                            <td>
+                                <!-- Nút xóa, bấm vào sẽ xóa thông tin dựa vào khóa chính `sp_ma` -->
+                                <a id="delete_3" data-sp-ma="4" class="btn btn-danger btn-delete-sanpham">
+                                    <i class="fa fa-trash" aria-hidden="true"></i> Xóa
+                                </a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+  
+                <a href="../base.html" class="btn btn-warning btn-md"><i class="fa fa-arrow-left"
+                        aria-hidden="true"></i>&nbsp;Quay về trang chủ</a>
+                <a href="" class="btn btn-primary btn-md"><i class="fa fa-shopping-cart"
+                        aria-hidden="true"></i>&nbsp;Mượn sách</a>
+            </div>
+        </div>
       </div>
-    </section><!-- End Portfolio Details Section -->
+    </section>
+
+    
 
   </main><!-- End #main -->
 
@@ -192,7 +206,10 @@
           <div class="col-lg-6 footer-links">
             <h4>Useful Links</h4>
             <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#book">Sách</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#home">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#introduction">Giới thiệu</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#mustread">Sách nên đọc</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#member">Chúng tôi là ai?</a></li>
             </ul>
           </div>
 
