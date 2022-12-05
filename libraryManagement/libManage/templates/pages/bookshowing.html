@@ -113,17 +113,15 @@
     <section id="portfolio-details" class="portfolio-details">
       <div class="container">
 
-        <div class="row gy-4">
+        <div class="product-content row">
 
-          <div class="col-lg-8">
-            <div class="product-content-left row">
-              <div class="product-content-left-big-img">
-                  <img src="{{book.img.url}}" alt="">
-              </div>
+          <div class="product-content-left row">
+            <div class="product-content-left-big-img">
+                <img src="{{book.img.url}}" alt="">
             </div>
           </div>
 
-          <div class="col-lg-4">
+          <div class="product-content-right">
             <div class="portfolio-info">
               <h3>Thông tin sách: </h3>
               <ul>
@@ -135,7 +133,7 @@
             </div>
 
             <div class="quantity">
-              <p style="font-weight: bold; color: #ddd;">Số lượng :</p>
+              <p style="font-weight: bold; color: #ddd; margin: 0 18px;">Số lượng :</p>
               <input type="number" min="0" value="1">
               <p style="color: #ddd;"> <i>Còn {{number}} quyển trong thư viện</i></p>
             </div>
