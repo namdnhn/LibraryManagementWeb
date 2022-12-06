@@ -37,26 +37,11 @@
       <nav id="navbar" class="navbar">
         <ul>
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="/home#">Trang chủ</a>
+            <a class="nav-link active" aria-current="page" href="">Trang chủ</a>
           </li>
 
           <li class="nav-item">
-            <a class="nav-link" href="/cart#">Giỏ sách </a>
-          </li>
-
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                data-bs-toggle="dropdown" aria-expanded="false">
-                Đề xuất
-            </a>
-
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="#">Top 10 truyện hot</a></li>
-                <li>
-                    <hr class="dropdown-divider">
-                </li>
-                <li><a class="dropdown-item" href="#"></a></li>
-            </ul>
+            <a class="nav-link active" aria-current="page" href="booklist.html">List sách</a>
           </li>
 
           {% if user.username %}
@@ -65,14 +50,17 @@
                   Hello, {{user.username}}
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="#">Thông tin cá nhân</a></li>
-                  <li><a class="dropdown-item" href="#">Đổi mật khẩu</a></li>
+                  <li>
+                    <a class="dropdown-item" href="profile.html" data-gallery="Portfolio" class="portfolio-lightbox preview-link"> Thông tin cá nhân</a>
+                  </li>
+                  <li><a class="dropdown-item" href="cart.html">Giỏ sách</a></li>
+                  <li><a class="dropdown-item" href="borrowedlist.html">Sách đã mượn</a></li>
                   <li><hr class="dropdown-divider"></li>
                   <li><a class="dropdown-item" href="logout/">Đăng xuất</a></li>
                 </ul>
               </li>           
             {% else %}
-              <a href="login">
+              <a href="login/">
                 <button class="btn btn-outline-success me-2" type="button">Đăng nhập</button>
               </a>
             {% endif %}

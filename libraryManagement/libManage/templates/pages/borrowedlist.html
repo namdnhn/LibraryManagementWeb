@@ -89,50 +89,82 @@
       <div class="container">
 
         <ol>
-          <li><a href="home">Trang chủ</a></li>
-          <li>List sách</li>
+          <li><a href="index.html">Trang chủ</a></li>
+          <li>Sách đã mượn</li>
         </ol>
-        <h2>Sách</h2>
+        <h2>Sách đã mượn</h2>
 
       </div>
     </section><!-- End Breadcrumbs -->
 
 
     <!-- List -->
-    <section id="list" class="list section-bg">
-      <div class="container" data-aos="fade-up">
-
-        <div class="section-title">
-          <h2>List sách</h2>
-          <p>Mời bạn đọc</p>
+    <section class="cart">
+      <div class="container mt-4">
+        <div id="thongbao" class="alert alert-danger d-none face" role="alert">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">×</span>
+            </button>
         </div>
-
+  
+        <h1 class="text-center">Sách đã mượn</h1>
         <div class="row">
-
-          <div class="row">
-            <div class="col-lg-4">
-              <a href="portfolio-details.html">
-                <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="100">
-                  <div class="pic"><img src="assets/img/portfolio/1.jpg" class="img-fluid" alt=""></div>
-                  <div class="member-info">
-                    <h4>Tên truyện</h4>
-                    <span>Thể loại</span>
-                    <div class="portfolio-info">
-                      <ul>
-                        <li><strong>Tác giả</strong>: xxx</li>
-                        <li><strong>Giá thuê/ngày</strong>: xxx</li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </a>
+            <div class="col col-md-12">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>STT</th>
+                            <th>Ảnh đại diện</th>
+                            <th>Tên sản phẩm</th>
+                            <th>Số lượng</th>
+                            <th>Hạn lấy sách</th>
+                            <th>Hạn trả sách</th>
+                            <th>Thành tiền</th>
+                        </tr>
+                    </thead>
+                    <tbody id="datarow">
+                        <tr>
+                            <td>1</td>
+                            <td>
+                                <img src="assets/img/portfolio/1.jpg" width="120" height="130" class="hinhdaidien">
+                            </td>
+                            <td>Tên sách</td>
+                            <td class="text-right">2</td>
+                            <td class="text-right">xx-xx-xxxx</td>
+                            <td class="text-right">xx-xx-xxxx</td>
+                            <td class="text-right">(ngày hiện tại - ngày lấy sách) * đơn giá * số lg</td>
+                        </tr>
+                        <tr>
+                          <td>2</td>
+                          <td>
+                              <img src="assets/img/portfolio/2.jpg" width="120" height="130" class="hinhdaidien">
+                          </td>
+                          <td>Tên sách</td>
+                          <td class="text-right">2</td>
+                          <td class="text-right">xx-xx-xxxx</td>
+                          <td class="text-right">xx-xx-xxxx</td>
+                          <td class="text-right">(ngày hiện tại - ngày lấy sách) * đơn giá * số lg</td>
+                        </tr>
+                        <tr>
+                          <td>3</td>
+                          <td>
+                              <img src="assets/img/portfolio/3.jpg" width="120" height="130" class="hinhdaidien">
+                          </td>
+                          <td>Tên sách</td>
+                          <td class="text-right">2</td>
+                          <td class="text-right">xx-xx-xxxx</td>
+                          <td class="text-right">xx-xx-xxxx</td>
+                          <td class="text-right">(ngày hiện tại - ngày lấy sách) * đơn giá * số lg</td>
+                        </tr>
+                    </tbody>
+                </table>
+  
+                <a href="../base.html" class="btn btn-warning btn-md"><i class="fa fa-arrow-left"
+                        aria-hidden="true"></i>&nbsp;Quay về trang chủ</a>
             </div>
-          </div>
-
         </div>
-
       </div>
-    </section><!-- End List Section -->
+    </section>
     
 
   </main><!-- End #main -->
@@ -158,7 +190,7 @@
           <div class="col-lg-6 footer-links">
             <h4>Useful Links</h4>
             <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#home">List sách</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#home">Sách đã mượn</a></li>
             </ul>
           </div>
 
