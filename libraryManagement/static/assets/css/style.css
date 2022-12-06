@@ -1201,3 +1201,84 @@ section {
 .cart td {
   color: #ddd;
 }
+
+/*--------------------------------------------------------------
+# LIST BOOK
+--------------------------------------------------------------*/
+.list {
+  background-color: #3c3e3f;
+}
+
+.list .section-title {
+  color: #ddd;
+}
+
+.list .member {
+  position: relative;
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  border-radius: 5px;
+  background: #fff;
+  transition: 0.5s;
+}
+
+.list .member .pic {
+  overflow: hidden;
+  width: 180px;
+  border-radius: 3%;
+}
+
+.list .member .pic img {
+  transition: ease-in-out 0.3s;
+  width: 200px;
+  height: 200px;
+}
+
+.list .member:hover {
+  transform: translateY(-10px);
+}
+
+.list .member .member-info {
+  padding-left: 30px;
+}
+
+.list .member h4 {
+  font-weight: 700;
+  margin-bottom: 5px;
+  font-size: 20px;
+  color: #37517e;
+}
+
+.list .member span {
+  display: block;
+  font-size: 15px;
+  padding-bottom: 10px;
+  position: relative;
+  font-weight: 500;
+  color: #212425;
+}
+
+.list .member span::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 50px;
+  height: 1px;
+  background: #cbd6e9;
+  bottom: 0;
+  left: 0;
+}
+
+.list .member p {
+  margin: 10px 0 0 0;
+  font-size: 14px;
+}
+
+.list .member li {
+  font-size: 14px;
+  color: #212425;
+}
+
+.list .member {
+  margin-bottom: 30px;
+}
