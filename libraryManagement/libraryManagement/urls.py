@@ -23,6 +23,7 @@ urlpatterns = [
     path('', include('libManage.urls')),
     path('blog/', include('libManage.urls')),
     path('cart/', include('user_cart.urls')),
+    path('book/', include('listbook.urls')),
 ]
 
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

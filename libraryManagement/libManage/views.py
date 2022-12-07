@@ -1,6 +1,6 @@
 from django.shortcuts import redirect, render
 from django.http import HttpResponse, Http404
-from .models import Post, Book
+from .models import Post
 from .forms import RegistrationForm
 from django.http import HttpResponseRedirect 
 from django.contrib import messages
@@ -37,18 +37,5 @@ def register(request):
         form = RegistrationForm()
     return render(request, 'pages/register.html', {'form': form})
 
-def bookpage(request, id):
-    try:
-        book = Book.objects.get(id=id)
-        number = book_number(book)
-    except Book.DoesNotExist:
-        raise Http404("Sach khong ton tai")
-    return render(request, 'pages/bookshowing.html', {'book': book, 'number' : number})
 
-def book_number(name):
-    queryset = Book.objects
-    for book in queryset:
-        if(book.book == name):
-            return book.inStock
-    return 0
 

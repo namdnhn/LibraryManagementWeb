@@ -2,7 +2,7 @@ from django.core.exceptions import ObjectDoesNotExist
 from django.shortcuts import get_object_or_404, render, redirect
 from django.contrib.auth.decorators import login_required
 
-from libManage.models import Book
+from listbook.models import Book
 from .models import CartItem, Cart
 
 # Create your views here.

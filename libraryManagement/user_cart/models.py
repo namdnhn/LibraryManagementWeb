@@ -1,5 +1,5 @@
 from django.db import models
-from libManage.models import Book
+from listbook.models import Book
 from django.contrib.auth.models import User
 
 # Create your models here.
