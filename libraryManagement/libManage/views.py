@@ -1,10 +1,11 @@
 from django.shortcuts import redirect, render
 from django.http import HttpResponse, Http404
-from .models import Post, Book, BookCopies
+from .models import Post, Book
 from .forms import RegistrationForm
 from django.http import HttpResponseRedirect 
 from django.contrib import messages
 from django.contrib.auth import authenticate, login
+from django.views.generic import ListView
 
 # Create your views here.
 def index(request):
@@ -45,11 +46,9 @@ def bookpage(request, id):
     return render(request, 'pages/bookshowing.html', {'book': book, 'number' : number})
 
 def book_number(name):
-    queryset = BookCopies.objects.select_related('book')
+    queryset = Book.objects
     for book in queryset:
         if(book.book == name):
-            return book.copynum
+            return book.inStock
     return 0
 
-def cart(request):
-    return 0

@@ -136,12 +136,12 @@
 
             <div class="quantity">
               <p style="font-weight: bold; color: #ddd;">Số lượng :</p>
-              <input type="number" min="0" value="1">
+              <input type="number" min="0" value="1" max="{{book.inStock}}">
               <p style="color: #ddd;"> <i>Còn {{number}} quyển trong thư viện</i></p>
             </div>
             <div class="product-content-right-book-button">
               <button>
-                  <p>MƯỢN SÁCH</p>
+                <a href="add_cart/{{ book.id }}/">MƯỢN SÁCH</a>
               </button>
             </div>
 
