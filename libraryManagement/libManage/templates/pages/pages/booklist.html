@@ -60,7 +60,7 @@
                     <a href="#profile" data-gallery="Portfolio" class="portfolio-lightbox preview-link"> Thông tin cá nhân</a>
                   </li>
                   <li><a class="dropdown-item" href="cart">Giỏ sách</a></li>
-                  <li><a class="dropdown-item" href="borrowed">Sách đã mượn</a></li>
+                  <li><a class="dropdown-item" href="borrowedt">Sách đã mượn</a></li>
                   <li><hr class="dropdown-divider"></li>
                   <li><a class="dropdown-item" href="logout/">Đăng xuất</a></li>
                 </ul>
@@ -95,82 +95,52 @@
       <div class="container">
 
         <ol>
-          <li><a href="index.html">Trang chủ</a></li>
-          <li>Sách đã mượn</li>
+          <li><a href="home">Trang chủ</a></li>
+          <li>List sách</li>
         </ol>
-        <h2>Sách đã mượn</h2>
+        <h2>Sách</h2>
 
       </div>
     </section><!-- End Breadcrumbs -->
 
 
     <!-- List -->
-    <section class="cart">
-      <div class="container mt-4">
-        <div id="thongbao" class="alert alert-danger d-none face" role="alert">
-            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                <span aria-hidden="true">×</span>
-            </button>
+    <section id="list" class="list section-bg">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>List sách</h2>
+          <p>Mời bạn đọc</p>
         </div>
-  
-        <h1 class="text-center">Sách đã mượn</h1>
+
         <div class="row">
-            <div class="col col-md-12">
-                <table class="table table-bordered">
-                    <thead>
-                        <tr>
-                            <th>STT</th>
-                            <th>Ảnh đại diện</th>
-                            <th>Tên sản phẩm</th>
-                            <th>Số lượng</th>
-                            <th>Hạn lấy sách</th>
-                            <th>Hạn trả sách</th>
-                            <th>Thành tiền</th>
-                        </tr>
-                    </thead>
-                    <tbody id="datarow">
-                        <tr>
-                            <td>1</td>
-                            <td>
-                                <img src="assets/img/portfolio/1.jpg" width="120" height="130" class="hinhdaidien">
-                            </td>
-                            <td>Tên sách</td>
-                            <td class="text-right">2</td>
-                            <td class="text-right">xx-xx-xxxx</td>
-                            <td class="text-right">xx-xx-xxxx</td>
-                            <td class="text-right">(ngày hiện tại - ngày lấy sách) * đơn giá * số lg</td>
-                        </tr>
-                        <tr>
-                          <td>2</td>
-                          <td>
-                              <img src="assets/img/portfolio/2.jpg" width="120" height="130" class="hinhdaidien">
-                          </td>
-                          <td>Tên sách</td>
-                          <td class="text-right">2</td>
-                          <td class="text-right">xx-xx-xxxx</td>
-                          <td class="text-right">xx-xx-xxxx</td>
-                          <td class="text-right">(ngày hiện tại - ngày lấy sách) * đơn giá * số lg</td>
-                        </tr>
-                        <tr>
-                          <td>3</td>
-                          <td>
-                              <img src="assets/img/portfolio/3.jpg" width="120" height="130" class="hinhdaidien">
-                          </td>
-                          <td>Tên sách</td>
-                          <td class="text-right">2</td>
-                          <td class="text-right">xx-xx-xxxx</td>
-                          <td class="text-right">xx-xx-xxxx</td>
-                          <td class="text-right">(ngày hiện tại - ngày lấy sách) * đơn giá * số lg</td>
-                        </tr>
-                    </tbody>
-                </table>
-  
-                <a href="home" class="btn btn-warning btn-md"><i class="fa fa-arrow-left"
-                        aria-hidden="true"></i>&nbsp;Quay về trang chủ</a>
+
+          <div class="row">
+            {% for book in books %}
+            <div class="col-lg-4">
+              <a href="portfolio-details.html">
+                <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="100">
+                  <div class="pic"><img src="{{book.img.url}}" class="img-fluid" alt=""></div>
+                  <div class="member-info">
+                    <h4>{{book.title}}</h4>
+                    <span>{{book.genre}}</span>
+                    <div class="portfolio-info">
+                      <ul>
+                        <li><strong>Tác giả</strong>: {{book.author_name}}</li>
+                        <li><strong>Giá thuê/ngày</strong>: {{book.price}} VNĐ</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </a>
             </div>
+            {% endfor %}
+          </div>
+
         </div>
+
       </div>
-    </section>
+    </section><!-- End List Section -->
     
 
   </main><!-- End #main -->
@@ -196,7 +166,7 @@
           <div class="col-lg-6 footer-links">
             <h4>Useful Links</h4>
             <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#home">Sách đã mượn</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#home">List sách</a></li>
             </ul>
           </div>
 
@@ -255,7 +225,6 @@
             </div>
   
           </div>
-
 
         </div>
       </div>
