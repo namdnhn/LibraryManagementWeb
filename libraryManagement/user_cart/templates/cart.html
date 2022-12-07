@@ -1,3 +1,4 @@
+<<<<<<< HEAD:libraryManagement/user_cart/templates/cart.html
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
@@ -245,4 +246,251 @@
 
 </body>
 
+=======
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>{% block title %}{% endblock %}</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Jost:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{% static 'assets/vendor/aos/aos.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/remixicon/remixicon.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="{% static 'assets/css/style.css' %}" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top header-inner-pages">
+    <div class="container d-flex align-items-center">
+
+      <a href="home" class="logo me-auto"><img src="{% static 'des/logo.png' %}" width = "200" height = "60" alt="" class="img-fluid"></a>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="">Trang chủ</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="booklist.html">List sách</a>
+          </li>
+
+          {% if user.username %}
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Hello, {{user.username}}
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li>
+                    <a class="dropdown-item" href="profile.html" data-gallery="Portfolio" class="portfolio-lightbox preview-link"> Thông tin cá nhân</a>
+                  </li>
+                  <li><a class="dropdown-item" href="cart.html">Giỏ sách</a></li>
+                  <li><a class="dropdown-item" href="borrowedlist.html">Sách đã mượn</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="logout/">Đăng xuất</a></li>
+                </ul>
+              </li>           
+            {% else %}
+              <a href="login/">
+                <button class="btn btn-outline-success me-2" type="button">Đăng nhập</button>
+              </a>
+            {% endif %}
+
+          <form class="d-flex">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success me-2" type="button">
+                <img src="{% static 'des/search.png' %}" alt="" width="22" height="22"
+                    class="d-inline-block align-text-top">
+            </button>
+            </button>
+          </form>
+
+        </ul>
+          
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+  <main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <section id="breadcrumbs" class="breadcrumbs">
+      <div class="container">
+
+        <ol>
+          <li><a href="home">Trang chủ</a></li>
+          <li>Giỏ sách</li>
+        </ol>
+        <h2>Giỏ sách</h2>
+
+      </div>
+    </section><!-- End Breadcrumbs -->
+
+
+    <!-- List -->
+    <section class="cart">
+      <div class="container mt-4">
+        <div id="thongbao" class="alert alert-danger d-none face" role="alert">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">×</span>
+            </button>
+        </div>
+  
+        <h1 class="text-center">Giỏ sách</h1>
+        <div class="row">
+            <div class="col col-md-12">
+                <table class="table table-bordered">
+                  <thead>
+                    <tr>
+                        <th>STT</th>
+                        <th>Ảnh đại diện</th>
+                        <th>Tên sản phẩm</th>
+                        <th>Số lượng</th>
+                        <th>Đơn giá</th>
+                        <th>Hành động</th>
+                    </tr>
+                </thead>
+                <tbody id="datarow">
+                    <tr>
+                        <td>1</td>
+                        <td>
+                            <img src="assets/img/portfolio/1.jpg" width="120" height="130" class="hinhdaidien">
+                        </td>
+                        <td>Tên sách</td>
+                        <td class="text-right">2</td>
+                        <td class="text-right">Đơn giá</td>
+                        <td>
+                            <!-- Nút xóa, bấm vào sẽ xóa thông tin dựa vào khóa chính `sp_ma` -->
+                            <a id="delete_1" data-sp-ma="2" class="btn btn-danger btn-delete-sanpham">
+                                <i class="fa fa-trash" aria-hidden="true"></i> Xóa
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                      <td>2</td>
+                      <td>
+                          <img src="assets/img/portfolio/2.jpg" width="120" height="130" class="hinhdaidien">
+                      </td>
+                      <td>Tên sách</td>
+                      <td class="text-right">2</td>
+                      <td class="text-right">Đơn giá</td>
+                      <td>
+                          <!-- Nút xóa, bấm vào sẽ xóa thông tin dựa vào khóa chính `sp_ma` -->
+                          <a id="delete_1" data-sp-ma="2" class="btn btn-danger btn-delete-sanpham">
+                              <i class="fa fa-trash" aria-hidden="true"></i> Xóa
+                          </a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>3</td>
+                      <td>
+                          <img src="assets/img/portfolio/3.jpg" width="120" height="130" class="hinhdaidien">
+                      </td>
+                      <td>Tên sách</td>
+                      <td class="text-right">2</td>
+                      <td class="text-right">Đơn giá</td>
+                      <td>
+                          <!-- Nút xóa, bấm vào sẽ xóa thông tin dựa vào khóa chính `sp_ma` -->
+                          <a id="delete_1" data-sp-ma="2" class="btn btn-danger btn-delete-sanpham">
+                              <i class="fa fa-trash" aria-hidden="true"></i> Xóa
+                          </a>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+  
+                <a href="../base.html" class="btn btn-warning btn-md"><i class="fa fa-arrow-left"
+                        aria-hidden="true"></i>&nbsp;Quay về trang chủ</a>
+                <a href="" class="btn btn-primary btn-md"><i class="fa fa-shopping-cart"
+                        aria-hidden="true"></i>&nbsp;Mượn sách</a>
+            </div>
+        </div>
+      </div>
+    </section>
+
+    
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-6 footer-contact">
+            <h3>Library</h3>
+            <p>
+              144 Xuân Thuỷ <br>
+              Cầu Giấy, Hà Nội<br>
+              Việt Nam <br><br>
+              <strong>Phone:</strong> +84 xxx xxx xxx<br>
+              <strong>Email:</strong> xxx@gmail.com<br>
+            </p>
+          </div>
+
+          <div class="col-lg-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#home">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#introduction">Giới thiệu</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#mustread">Sách nên đọc</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#member">Chúng tôi là ai?</a></li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container footer-bottom clearfix">
+      <div class="copyright">
+        &copy; INT2211 24 
+      </div>
+      <div class="credits">
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="{% static 'assets/vendor/aos/aos.js' %}"></script>
+  <script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/glightbox/js/glightbox.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/swiper/swiper-bundle.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/waypoints/noframework.waypoints.js' %}"></script>
+  <script src="{% static 'assets/vendor/php-email-form/validate.js' %}"></script>
+
+  <!-- Template Main JS File -->
+  <script src="{% static 'assets/js/main.js' %}"></script>
+  {% endblock %}
+
+</body>
+
+>>>>>>> de82136f08cf80ab6e7011fef728bb375236ed45:libraryManagement/libManage/templates/pages/cart.html
 </html>

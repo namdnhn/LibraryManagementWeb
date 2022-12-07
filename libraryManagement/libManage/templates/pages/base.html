@@ -38,22 +38,7 @@
           </li>
 
           <li class="nav-item">
-            <a class="nav-link" href="/cart#">Giỏ sách </a>
-          </li>
-
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                data-bs-toggle="dropdown" aria-expanded="false">
-                Đề xuất
-            </a>
-
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="#">Top 10 truyện hot</a></li>
-                <li>
-                    <hr class="dropdown-divider">
-                </li>
-                <li><a class="dropdown-item" href="#"></a></li>
-            </ul>
+            <a class="nav-link active" aria-current="page" href="booklist.html">List sách</a>
           </li>
 
           {% if user.username %}
@@ -62,8 +47,11 @@
                   Hello, {{user.username}}
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="#">Thông tin cá nhân</a></li>
-                  <li><a class="dropdown-item" href="#">Đổi mật khẩu</a></li>
+                  <li>
+                    <a class="dropdown-item" href="profile.html" data-gallery="Portfolio" class="portfolio-lightbox preview-link"> Thông tin cá nhân</a>
+                  </li>
+                  <li><a class="dropdown-item" href="cart.html">Giỏ sách</a></li>
+                  <li><a class="dropdown-item" href="borrowedlist.html">Sách đã mượn</a></li>
                   <li><hr class="dropdown-divider"></li>
                   <li><a class="dropdown-item" href="logout/">Đăng xuất</a></li>
                 </ul>
@@ -182,7 +170,7 @@
               <h4>Dế mèn phiêu lưu ký</h4>
               <p>Giải trí</p>
               <a href="{% static 'assets/img/portfolio/1.jpg' %}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Giải trí"><i class="bx bx-plus"></i></a>
-              <a href="bookshowing" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+              <a href="book/1" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
             </div>
           </div>
 
@@ -192,7 +180,7 @@
               <h4>Giáo trình Hán ngữ quyển 1</h4>
               <p>Ngôn ngữ</p>
               <a href="{% static 'assets/img/portfolio/2.jpg' %}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Ngôn ngữ"><i class="bx bx-plus"></i></a>
-              <a href="bookshowing" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+              <a href="book/2" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
             </div>
           </div>
 
@@ -202,7 +190,7 @@
               <h4>Sự im lặng của bầy cừu</h4>
               <p>Giải trí</p>
               <a href="{% static 'assets/img/portfolio/3.jpg' %}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Giải trí"><i class="bx bx-plus"></i></a>
-              <a href="bookshowing" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+              <a href="book/3" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
             </div>
           </div>
 
@@ -212,7 +200,7 @@
               <h4>Giáo trình lập trình C++</h4>
               <p>Tài liệu tham khảo</p>
               <a href="{% static 'assets/img/portfolio/4.jpg' %}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Tài liệu tham khảo"><i class="bx bx-plus"></i></a>
-              <a href="bookshowing" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+              <a href="book/4" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
             </div>
           </div>
 
