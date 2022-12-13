@@ -21,12 +21,8 @@ def listbook(request):
     })
 
 def bookpage(request, id):
-    try:
-        book = Book.objects.get(id=id)
-        number = book_number(book)
-    except Book.DoesNotExist:
-        raise Http404("Sach khong ton tai")
-    return render(request, 'bookshowing.html', {'book': book, 'number' : number})
+    book = Book.objects.get(id=id)
+    return render(request, 'bookshowing.html', {'book': book})
 
 def book_number(name):
     queryset = Book.objects

@@ -7,7 +7,7 @@ class CategoryAdmin(admin.ModelAdmin):
     list_display = ('category_name', 'slug')
 
 class BookAdmin(admin.ModelAdmin):
-    list_display = ['title', 'slug', 'publisher', 'genre', 'author_name', 'description', 'price', 'inStock', 'is_available', 'img']
+    list_display = ['id', 'title', 'slug', 'publisher', 'genre', 'author_name', 'description', 'price', 'inStock', 'is_available', 'img']
     list_filter = ['id', 'title', 'genre']
     search_fields = ['title', 'publisher', 'author_name']
     prepopulated_fields = {'slug': ('title',)}
