@@ -38,16 +38,16 @@
   <header id="header" class="fixed-top header-inner-pages">
     <div class="container d-flex align-items-center">
 
-      <a href="/home#" class="logo me-auto"><img src="{% static 'des/logo.png' %}" width = "200" height = "60" alt="" class="img-fluid"></a>
+      <a href="{% url 'home' %}" class="logo me-auto"><img src="{% static 'des/logo.png' %}" width = "200" height = "60" alt="" class="img-fluid"></a>
 
       <nav id="navbar" class="navbar">
         <ul>
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Trang chủ</a>
+            <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Trang chủ</a>
           </li>
 
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="booklist">List sách</a>
+            <a class="nav-link active" aria-current="page" href="{% url 'listbook:listbook' %}">List sách</a>
           </li>
 
           {% if user.username %}
@@ -59,7 +59,7 @@
                   <li>
                     <a href="#profile" data-gallery="Portfolio" class="portfolio-lightbox preview-link"> Thông tin cá nhân</a>
                   </li>
-                  <li><a class="dropdown-item" href="listbook">Giỏ sách</a></li>
+                  <li><a class="dropdown-item" href="{% url 'user_cart:cart_detail' %}">Giỏ sách</a></li>
                   <li><a class="dropdown-item" href="borrowed">Sách đã mượn</a></li>
                   <li><hr class="dropdown-divider"></li>
                   <li><a class="dropdown-item" href="logout/">Đăng xuất</a></li>
@@ -71,8 +71,8 @@
               </a>
             {% endif %}
 
-          <form class="d-flex">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <form action="{% url 'listbook:search' %}" class="search" method="GET">
+            <input type="text" class="form-control" style="width:60%;" placeholder="Search" name="q" value="{{ q }}">
             <button class="btn btn-outline-success me-2" type="button">
                 <img src="{% static 'des/search.png' %}" alt="" width="22" height="22"
                     class="d-inline-block align-text-top">
@@ -126,56 +126,12 @@
               </ul>
             </div>
 
-            <form method="POST" action="{% url 'cart:add' %}">
+            <form method="POST" action="">
               {% csrf_token %}
               <input type="hidden" name="book_id" value="{{book.id}}" />
               <input type="hidden" name="quantity" value="1" />
-              <button type="submit" class="btn btn-primary">
-                <i class="fa fa-cart-plus fa-lg mr-2"></i> Thêm vào giỏ
-              </button>
-              <a href="{% url 'cart_add' product.id %}">Add To Cart</a>
+              <a href="{% url 'user_cart:cart_add' book.id %}">Add To Cart</a>
             </form>
-
-            <!-- {% if book.id in cart.keys %}
-              <form action="{% url 'cart:add' %}" method="POST" style="max-width: 400px">
-                {% csrf_token %}
-                <input type="hidden" name="book_id" value="{{book.id}}">
-                <div class="input-group">
-                  <div class="input-group-prepend">
-                    <span class="input-group-text">Số lượng</span>
-                  </div>
-                  <input
-                    type="number"
-                    min="1"
-                    name="quantity"
-                    value="10"
-                    required="required"
-                    class="form-control"
-                  />
-                  <div class="input-group-append btn-group">
-                    <button class="btn btn-primary" type="submit">
-                      <i class="fa fa-cart-plus fa-lg mr-2"></i> Sửa
-                    </button>
-                    <a href="{% url 'cart:remove' book.id %}" class="btn btn-danger">
-                      <i class="fa fa-times fa-lg mr-2"></i> Xóa
-                    </a>
-                  </div>
-                </div>
-              </form>
-              {% elif book.is_available %}
-              <form method="POST" action="{% url 'cart:add' %}">
-                {% csrf_token %}
-                <input type="hidden" name="quantity" value="1" />
-                <input type="hidden" name="book_id" value="{{book.id}}" />
-                <button type="submit" class="btn btn-primary">
-                  <i class="fa fa-cart-plus fa-lg mr-2"></i> Thêm vào giỏ
-                </button>
-              </form>
-              {% else %}
-              <button class="btn btn-primary" disabled>
-                <i class="fa fa-cart-plus fa-lg mr-2"></i> Thêm vào giỏ
-              </button>
-              {% endif %} -->
 
             <div class="product-content-right-bottom">
               <div class="product-content-right-bottom-top">

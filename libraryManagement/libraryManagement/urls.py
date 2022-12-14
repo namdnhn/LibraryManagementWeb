@@ -22,7 +22,7 @@ urlpatterns = [
     path('home/', include('libManage.urls')),
     path('', include('libManage.urls')),
     path('blog/', include('libManage.urls')),
-    path('cart/', include('user_cart.urls')),
+    path('cart/', include(('user_cart.urls', 'user_cart'), namespace='user_cart')),
     path('book/', include('listbook.urls')),
 ]
 

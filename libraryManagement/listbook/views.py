@@ -2,6 +2,8 @@ from django.shortcuts import render
 from .models import Book
 from django.core.paginator import Paginator
 from django.http import Http404
+from django.db.models import Q
+
 
 # Create your views here.
 def index(request):
@@ -31,5 +33,16 @@ def book_number(name):
             return book.inStock
     return 0
 
-
-
+def search(request):
+    if 'q' in request.GET:
+        q = request.GET.get('q')
+        books = Book.objects.order_by('-title').filter(Q(title__icontains=q) | Q(description__icontains=q))
+        page = request.GET.get('page')
+        page = page or 1
+        paginator = Paginator(books, 6) # phan trang (3 quyen 1 trang)
+        paged_books = paginator.get_page(page)
+        book_count = books.count()
+    return render(request, 'booklist.html', {
+        'books': paged_books,
+        'book_count': book_count
+    })
