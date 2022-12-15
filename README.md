@@ -32,9 +32,10 @@
 
 >**FRAMEWORK** 
 >
-[Bootstrap](https://getbootstrap.com/)
+<img src="https://user-images.githubusercontent.com/100185884/207886555-533dc8f7-b3fc-4b66-8ab4-e29b4747e7b8.png" width="30" height="25">  [Bootstrap](https://getbootstrap.com/)
 
-[Django](https://www.djangoproject.com/)
+
+<img src="https://user-images.githubusercontent.com/100185884/207887804-fcb47903-a37c-4bd7-855e-4116a3a5a3b8.png" width="25" height="25">  [Django](https://www.djangoproject.com/)
 
 ## II. Các chức năng <a name="func"></a>
 
