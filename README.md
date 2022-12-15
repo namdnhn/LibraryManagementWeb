@@ -28,6 +28,9 @@
 |   3   |      Hồ Thu Giang      |  21020309  |   21020309@vnu.edu.vn   |
 
 ### 2. Thông tin web
+
+Có ai đó đã từng khẳng định rằng: “Sách hay, cũng như bạn tốt, ít và được chọn lựa; chọn lựa càng nhiều, thưởng thức càng nhiều”. Quả thật, sách đóng vai trò quan trọng trong cuộc sống. Chính vì vậy nhóm chúng em quyết định làm trang web quản lý thư viện này để giúp các bạn thuận lợi hơn trong việc mượn sách
+
 #### [LINK DEMO](https://hnpyne.pythonanywhere.com/)
 
 >**FRAMEWORK 🖼️** 
