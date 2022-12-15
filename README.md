@@ -51,7 +51,19 @@
 - Nội dung sách
 - Giỏ hàng
 
+>**CÁCH SỬ DỤNG 🖱️** 
+>
 
+***Đối với user 👨***
+- Đăng ký tài khoản
+- Chọn sách
+- Vào giỏ sách ấn mượn
+- Lên thư viện đọc thông tin và lấy sách cần mượn về
+
+***Đối với người trực thư viện 📖***
+- Đăng nhập vào tài khoản Admin được cấp
+- Cập nhật, thay đổi số lượng, thông tin sách
+- Check yêu cầu mượn sách
 
 ## II. Các chức năng <a name="func"></a>
 - Đăng ký
@@ -66,5 +78,10 @@
 
 
 ### 2. Mô tả
+- CSDL gồm ... bảng
+- Khoá chính, khoá ngoại
+- gì gì đọ iem mấc gốc csdl cíu pé éc éc éc hiuhiu
 
 ## IV. Hướng phát triển <a name="develop"></a>
+- Thêm trang các sách đã mượn
+- Cho phép người dùng tự thay đổi thông tin cá nhân
