@@ -90,7 +90,8 @@
 
 ## III. Cơ sở dữ liệu <a name="dtb"></a>
 ### 1.Mô hình quan hệ
-![image](https://user-images.githubusercontent.com/100185884/207890468-e697b780-9797-438e-bcf9-351e0434913e.png)
+![image](https://user-images.githubusercontent.com/100185884/207914433-c30d1b2f-5c5b-4d21-8c1f-5bedee0d2d86.png)
+
 
 
 ### 2. Mô tả
