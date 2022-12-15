@@ -39,12 +39,20 @@ def item_clear(request, id):
         cart.delete()
     return redirect("/cart/cart-detail")
 
+def total(cart):
+    list_item = CartItem.objects.filter(cart=cart)
+    tt = 0
+    for item in list_item:
+        tt += item.book.price
+    return tt
+
 @login_required(login_url="/login")
 def cart_detail(request):
     is_cart_exist = Cart.objects.filter(user_id=request.user).exists()
     if is_cart_exist:
         cart = Cart.objects.get(user_id=request.user)
         list_item = CartItem.objects.filter(cart=cart)
+        tt = total(cart)
         number = list_item.count()
         if number == 0:
             cart.delete()
@@ -53,8 +61,11 @@ def cart_detail(request):
                 })
         return render(request, 'cart.html', {
             'exist': is_cart_exist, 
-            'list_item': list_item
+            'list_item': list_item,
+            'total': tt
         })
     return render(request, 'cart.html', {
         'exist': is_cart_exist
         })
+
+

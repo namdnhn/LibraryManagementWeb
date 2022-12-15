@@ -47,7 +47,7 @@
           </li>
 
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="booklist">List sách</a>
+            <a class="nav-link active" aria-current="page" href="{% url 'listbook:listbook' %}">List sách</a>
           </li>
 
           {% if user.username %}

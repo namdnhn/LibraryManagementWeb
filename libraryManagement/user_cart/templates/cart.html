@@ -183,6 +183,8 @@
 
                         {% endfor %}
 
+                        
+
                     </tr>
 
                    
@@ -193,13 +195,13 @@
 
  
 
-                <a href="../base.html" class="btn btn-warning btn-md"><i class="fa fa-arrow-left"
+                <a href="{% url 'home' %}" class="btn btn-warning btn-md"><i class="fa fa-arrow-left"
 
                         aria-hidden="true"></i>&nbsp;Quay về trang chủ</a>
 
-                <a href="" class="btn btn-primary btn-md"><i class="fa fa-shopping-cart"
+                <a href="" class="btn btn-warning btn-md"><i class="fa fa-shopping-cart"
 
-                        aria-hidden="true"></i>&nbsp;Mượn sách</a>
+                        aria-hidden="true"></i>&nbsp;Tổng tiền: {{total}}</a>
 
             </div>
 
