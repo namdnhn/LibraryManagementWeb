@@ -16,7 +16,7 @@
 
 ## I. Giới thiệu chung <a name="introduction"></a>
 ### 1. Thông tin nhóm
-- Tên nhóm: **Web này hơi lớn**
+- Tên nhóm: **Web này hơi lớn 👀**
 - Lớp: INT2211 24 - Cơ sở dữ liệu
 - Tên web: LibraryManagementWeb
 - Thành viên 💻
