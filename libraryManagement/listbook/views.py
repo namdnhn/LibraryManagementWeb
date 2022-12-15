@@ -13,7 +13,7 @@ def listbook(request):
     books = Book.objects.all().filter(is_available=True)
     page = request.GET.get('page')
     page = page or 1
-    paginator = Paginator(books, 6) # phan trang (3 quyen 1 trang)
+    paginator = Paginator(books, 15) # phan trang (3 quyen 1 trang)
     paged_books = paginator.get_page(page)
     book_count = books.count()
 
@@ -39,7 +39,7 @@ def search(request):
         books = Book.objects.order_by('-title').filter(Q(title__icontains=q) | Q(description__icontains=q))
         page = request.GET.get('page')
         page = page or 1
-        paginator = Paginator(books, 6) # phan trang (3 quyen 1 trang)
+        paginator = Paginator(books, 15) # phan trang (3 quyen 1 trang)
         paged_books = paginator.get_page(page)
         book_count = books.count()
     return render(request, 'booksearch.html', {
