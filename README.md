@@ -2,7 +2,7 @@
 
 <h1 align="center">Table of contents 📖</h1>
 
-<h2 align="center">
+<h2>
   <a href="#introduction">I. Giới thiệu chung</a>
   <br />
   <a href="#func">II. Các chức năng</a>
