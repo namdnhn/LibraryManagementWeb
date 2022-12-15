@@ -32,7 +32,9 @@
 <p align="center"> Có ai đó đã từng khẳng định rằng: “Sách hay, cũng như bạn tốt, ít và được chọn lựa; chọn lựa càng nhiều, thưởng thức càng nhiều”. Quả thật, sách đóng vai trò quan trọng trong cuộc sống. Chính vì vậy nhóm chúng em quyết định làm trang web quản lý thư viện này để giúp các bạn thuận lợi hơn trong việc mượn sách
 </p>
 
-#### [LINK DEMO](https://hnpyne.pythonanywhere.com/)
+<p align="center">
+  <a href = "https://hnpyne.pythonanywhere.com/"> <b>LINK DEMO</b> </a>
+</p>
 
 >**FRAMEWORK 🖼️** 
 >
