@@ -67,11 +67,16 @@
 ***Đối với user 👨***
 - Đăng ký tài khoản
 - Chọn sách
-- Vào giỏ sách ấn mượn
+- Tham khảo những cuốn sách ở quầy trưng bày
+- Tìm kiếm sách theo tên,thể loại,mô tả
+- Thêm sách cần mượn vào giỏ
 - Lên thư viện đọc thông tin và lấy sách cần mượn về
 
 ***Đối với người trực thư viện 📖***
 - Đăng nhập vào tài khoản Admin được cấp
+- Sửa đổi cuốn sách ở quầy trưng bày
+- Cập nhật,sửa đổi thông tin người dùng
+- Quản lý thông tin các nhà xuất bản,tác giả
 - Cập nhật, thay đổi số lượng, thông tin sách
 - Check yêu cầu mượn sách
 
@@ -79,6 +84,7 @@
 - Đăng ký
 - Đăng nhập
 - Tìm kiếm sách
+- Quầy sách đề cử
 - Thêm sách vào giỏ hàng
 - Mượn sách
 
@@ -94,4 +100,6 @@
 
 ## IV. Hướng phát triển <a name="develop"></a>
 - Thêm trang các sách đã mượn
+- Đánh giá và bình luận của người dùng với sách
 - Cho phép người dùng tự thay đổi thông tin cá nhân
+- Phát triển thêm về đặt sách và thanh toán online có tiền cọc số lượng ngày thuê và được nhận trả sách tại nhà
