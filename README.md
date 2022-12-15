@@ -37,6 +37,30 @@
 
 <img src="https://user-images.githubusercontent.com/100185884/207887804-fcb47903-a37c-4bd7-855e-4116a3a5a3b8.png" width="25" height="25">  [Django](https://www.djangoproject.com/)
 
+
+>**CÁC TRANG** 
+> 
+
+- Home
+
+- Login
+
+- Signin
+
+- Thông tin người dùng
+
+- List sách
+
+- Thông tin sách
+
+- Kết quả tìm kiếm
+
+- Nội dung sách
+
+- Giỏ hàng
+
+
+
 ## II. Các chức năng <a name="func"></a>
 
 
