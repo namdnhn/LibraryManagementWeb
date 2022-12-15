@@ -95,9 +95,63 @@
 
 
 ### 2. Mô tả
-- CSDL gồm 8 bảng
-- Khoá chính, khoá ngoại
-- gì gì đọ iem mấc gốc csdl cíu pé éc éc éc hiuhiu
+- Cơ sở dữ liệu gồm 7 bảng
+
+>**Bảng unserinformation**
+>
+
+Dùng để lưu những thông tin chi tiết của người dùng (Bảng này chưa thực sự được dùng tới trong web demo)
+
+|     Khoá     |    Tên    |       Chức năng        |
+|:------------:|:---------:|:----------------------:|
+|  Khoá chính  |  user_id  |    id của người dùng   |
+|  Khoá ngoại  |  user_id  |   tham chiếu đến user  |
+
+
+>**Bảng user**
+>
+
+Lưu trữ username, password, email (thông tin trong phần register)
+
+
+|     Khoá     |    Tên    |             Chức năng             |
+|:------------:|:---------:|:---------------------------------:|
+|  Khoá chính  |    id     |   id của user do CSDL tự tạo ra   |
+|  Khoá ngoại  |           |                                   |
+
+
+>**Bảng listbook_book**
+>
+
+Quản lý sách trong thư viện
+
+|     Khoá     |    Tên     |                           Chức năng                       |
+|:------------:|:----------:|:---------------------------------------------------------:|
+|  Khoá chính  |    id      |                      Do CSDL tự tạo ra                    |
+|  Khoá ngoại  |  genre_id  |       Tham chiếu đến bảng category, là thể loại sách      |
+|              |publisher_id|  Tham chiếu đến bảng publisher đóng vai trò nhà xuất bản  |
+
+
+>**Bảng user_cart_cart**
+>
+
+Quản lý giỏ hàng của từng user
+
+|     Khoá     |    Tên     |                           Chức năng                       |
+|:------------:|:----------:|:---------------------------------------------------------:|
+|  Khoá chính  |    id      |                      Do CSDL tự tạo ra                    |
+|  Khoá ngoại  | user_id_id |                  Tham chiếu đến bảng user                 |
+
+>**Bảng user_cart_item**
+>
+
+Quản lý mỗi sản phẩm đã có trong giỏ hàng
+
+|     Khoá     |    Tên     |                           Chức năng                       |
+|:------------:|:----------:|:---------------------------------------------------------:|
+|  Khoá chính  |    id      |                      Do CSDL tự tạo ra                    |
+|  Khoá ngoại  |   book_id  |                    Tham chiếu tới book                    |
+|              |    cart    |                  Tham chiếu đến bảng cart                 |
 
 ## IV. Hướng phát triển <a name="develop"></a>
 - Thêm trang các sách đã mượn
