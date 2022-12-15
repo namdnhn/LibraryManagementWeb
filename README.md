@@ -1,6 +1,6 @@
 <h1 align="center">------------ 🔥 LibraryManagementWeb 🔥------------</h1>
 
-<h1 align="center">Table of contents 📖</h1>
+<h1>Table of contents 📖</h1>
 
 <h2>
   <a href="#introduction">I. Giới thiệu chung</a>
@@ -89,12 +89,12 @@
 - Mượn sách
 
 ## III. Cơ sở dữ liệu <a name="dtb"></a>
-### 1. ER Diagram
+### 1.Mô hình quan hệ
 ![image](https://user-images.githubusercontent.com/100185884/207890468-e697b780-9797-438e-bcf9-351e0434913e.png)
 
 
 ### 2. Mô tả
-- CSDL gồm ... bảng
+- CSDL gồm 8 bảng
 - Khoá chính, khoá ngoại
 - gì gì đọ iem mấc gốc csdl cíu pé éc éc éc hiuhiu
 
@@ -102,4 +102,5 @@
 - Thêm trang các sách đã mượn
 - Đánh giá và bình luận của người dùng với sách
 - Cho phép người dùng tự thay đổi thông tin cá nhân
+- Thêm top những cuốn sách được nhiều lượt đặt mua nhất
 - Phát triển thêm về đặt sách và thanh toán online có tiền cọc số lượng ngày thuê và được nhận trả sách tại nhà
