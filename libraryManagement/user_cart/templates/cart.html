@@ -238,7 +238,7 @@
             </ul>
           </li>
           {% else %}
-          <a href="login/">
+          <a href="{% url 'login' %}">
             <button class="btn btn-outline-success me-2" type="button">Đăng nhập</button>
           </a>
           {% endif %}
@@ -264,7 +264,7 @@
       <div class="container">
 
         <ol>
-          <li><a href="home">Trang chủ</a></li>
+          <li><a href="{% url 'home' %}">Trang chủ</a></li>
           <li>Giỏ sách</li>
         </ol>
         <h2>Giỏ sách</h2>
