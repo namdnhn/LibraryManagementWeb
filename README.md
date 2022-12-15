@@ -29,7 +29,7 @@
 
 ### 2. Thông tin web
 
-<p align="center"> Có ai đó đã từng khẳng định rằng: “Sách hay, cũng như bạn tốt, ít và được chọn lựa; chọn lựa càng nhiều, thưởng thức càng nhiều”. Quả thật, sách đóng vai trò quan trọng trong cuộc sống. Chính vì vậy nhóm chúng em quyết định làm trang web quản lý thư viện này để giúp các bạn thuận lợi hơn trong việc mượn sách
+<p align="center"> Có ai đó đã từng khẳng định rằng: “Sách hay, cũng như bạn tốt, ít và được chọn lựa; chọn lựa càng nhiều, thưởng thức càng nhiều”. Quả thật, sách đóng vai trò quan trọng trong cuộc sống. Chính vì vậy để khuyến khích mọi người đọc sách nhóm chúng em đã quyết định làm trang web quản lý thư viện này để giúp các bạn thuận lợi hơn trong việc mượn sách,mở mang tri thức. Thay vì phải tốn nhiều tiền để mua 1 quyển sách cùng lượng tiền ấy LibraryManagementWeb giúp người dùng có thể đọc được thêm nhiều cuốn sách hơn
 </p>
 
 <p align="center">
