@@ -61,6 +61,10 @@
 - Mượn sách
 
 ## III. Cơ sở dữ liệu <a name="dtb"></a>
+### 1. ER Diagram
+![image](https://user-images.githubusercontent.com/100185884/207890468-e697b780-9797-438e-bcf9-351e0434913e.png)
 
+
+### 2. Mô tả
 
 ## IV. Hướng phát triển <a name="develop"></a>
