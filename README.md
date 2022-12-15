@@ -37,7 +37,7 @@
 </p>
 
 <p align="center">
-  <a href = "https://youtu.be/WyQgAgDhr_8"> <b>VIDEO DEMO</b> </a>
+  <a href = "https://youtu.be/WyQgAgDhr_8"> <b>VIDEO DEMO (mở phụ đề))</b> </a>
 </p>
 
 >**FRAMEWORK 🖼️** 
