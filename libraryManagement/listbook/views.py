@@ -42,7 +42,8 @@ def search(request):
         paginator = Paginator(books, 6) # phan trang (3 quyen 1 trang)
         paged_books = paginator.get_page(page)
         book_count = books.count()
-    return render(request, 'booklist.html', {
+    return render(request, 'booksearch.html', {
         'books': paged_books,
+        'q' : q,
         'book_count': book_count
     })
