@@ -38,7 +38,7 @@
 <img src="https://user-images.githubusercontent.com/100185884/207887804-fcb47903-a37c-4bd7-855e-4116a3a5a3b8.png" width="25" height="25">  [Django](https://www.djangoproject.com/)
 
 
->**CÁC TRANG 📄 ** 
+>**CÁC TRANG 📄** 
 > 
 
 - Home
