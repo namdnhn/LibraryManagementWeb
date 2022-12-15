@@ -15,6 +15,17 @@
 <br />
 
 ## I. Giới thiệu chung <a name="introduction"></a>
+### 1. Thông tin nhóm
+- Tên nhóm: 
+- Lớp: INT2211 24 - Cơ sở dữ liệu
+- Tên web: LibraryManagementWeb
+- Thành viên
+
+| Order |          Name          |     ID     |          Email          |
+| :---: |:----------------------:|:----------:|:-----------------------:|
+|   1   |  Nguyễn Thị Ngọc Minh  |  21020358  |   21020385@vnu.edu.vn   |
+|   2   |    Đỗ Nhữ Hoàng Nam    |  21020126  |   21020126@vnu.edu.vn   |
+|   3   |      Hồ Thu Giang      |  21020309  |   21020309@vnu.edu.vn   |
 
 
 ## II. Các chức năng <a name="func"></a>
