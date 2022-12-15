@@ -38,7 +38,7 @@
   <header id="header" class="fixed-top header-inner-pages">
     <div class="container d-flex align-items-center">
 
-      <a href="#" class="logo me-auto"><img src="{% static 'des/logo.png' %}" width = "200" height = "60" alt="" class="img-fluid"></a>
+      <a href="{% url 'home' %}" class="logo me-auto"><img src="{% static 'des/logo.png' %}" width = "200" height = "60" alt="" class="img-fluid"></a>
 
       <nav id="navbar" class="navbar">
         <ul>
@@ -59,8 +59,8 @@
                   <li>
                     <a href="#profile" data-gallery="Portfolio" class="portfolio-lightbox preview-link"> Thông tin cá nhân</a>
                   </li>
-                  <li><a class="dropdown-item" href="cart">Giỏ sách</a></li>
-                  <li><a class="dropdown-item" href="borrowedt">Sách đã mượn</a></li>
+                  <li><a class="dropdown-item" href="{% url 'user_cart:cart_detail' %}">Giỏ sách</a></li>
+                  <!-- <li><a class="dropdown-item" href="borrowedt">Sách đã mượn</a></li> -->
                   <li><hr class="dropdown-divider"></li>
                   <li><a class="dropdown-item" href="logout/">Đăng xuất</a></li>
                 </ul>
@@ -71,14 +71,11 @@
               </a>
             {% endif %}
 
-            <form action="{% url 'listbook:search' %}" class="search" method="GET">
-              <input type="text" class="form-control" style="width:60%;" placeholder="Search" name="q" value="{{ q }}">
-              <button class="btn btn-outline-success me-2" type="button">
-                  <img src="{% static 'des/search.png' %}" alt="" width="22" height="22"
-                      class="d-inline-block align-text-top">
-              </button>
-              </button>
-            </form>
+            <a>
+              <form action="{% url 'listbook:search' %}" class="search" method="GET">
+                <input type="text" class="form-control" style="width:90%;" placeholder="Search" name="q" value="{{ q }}">
+              </form>
+            </a>
 
         </ul>
           

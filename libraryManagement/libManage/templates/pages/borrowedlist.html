@@ -59,7 +59,7 @@
                   <li>
                     <a href="#profile" data-gallery="Portfolio" class="portfolio-lightbox preview-link"> Thông tin cá nhân</a>
                   </li>
-                  <li><a class="dropdown-item" href="cart">Giỏ sách</a></li>
+                  <li><a class="dropdown-item" href="{% url 'user_cart:cart_detail' %}">Giỏ sách</a></li>
                   <li><a class="dropdown-item" href="borrowed">Sách đã mượn</a></li>
                   <li><hr class="dropdown-divider"></li>
                   <li><a class="dropdown-item" href="logout/">Đăng xuất</a></li>
@@ -71,14 +71,11 @@
               </a>
             {% endif %}
 
-          <form class="d-flex">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success me-2" type="button">
-                <img src="{% static 'des/search.png' %}" alt="" width="22" height="22"
-                    class="d-inline-block align-text-top">
-            </button>
-            </button>
-          </form>
+            <a>
+              <form action="{% url 'listbook:search' %}" class="search" method="GET">
+                <input type="text" class="form-control" style="width:90%;" placeholder="Search" name="q" value="{{ q }}">
+              </form>
+            </a>
 
         </ul>
           
