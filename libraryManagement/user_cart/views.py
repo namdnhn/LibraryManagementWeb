@@ -15,11 +15,13 @@ def cart_add(request, id):
     cart.save()
 
     book = Book.objects.get(id=id)
-    new_book = CartItem.objects.create(
-        book=book,
-        cart=cart,
-        is_active=True
-    )
+    is_book_exist = CartItem.objects.filter(book=book).exists()
+    if not is_book_exist:
+        new_book = CartItem.objects.create(
+            book=book,
+            cart=cart,
+            is_active=True
+        )
     return redirect("/cart/cart-detail")
 
 
@@ -30,6 +32,11 @@ def item_clear(request, id):
     book = Book.objects.get(id=id)
     product = CartItem.objects.get(cart=cart, book=book)
     product.delete()
+
+    list_item = CartItem.objects.filter(cart=cart)
+    number = list_item.count()
+    if number == 0:
+        cart.delete()
     return redirect("/cart/cart-detail")
 
 @login_required(login_url="/login")

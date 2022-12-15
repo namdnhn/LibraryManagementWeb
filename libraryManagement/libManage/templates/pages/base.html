@@ -68,8 +68,8 @@
               </a>
             {% endif %}
 
-          <form class="d-flex">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <form action="{% url 'listbook:search' %}" class="search" method="GET">
+            <input type="text" class="form-control" style="width:60%;" placeholder="Search" name="q" value="{{ q }}">
             <button class="btn btn-outline-success me-2" type="button">
                 <img src="{% static 'des/search.png' %}" alt="" width="22" height="22"
                     class="d-inline-block align-text-top">
