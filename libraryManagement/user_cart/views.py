@@ -15,7 +15,7 @@ def cart_add(request, id):
     cart.save()
 
     book = Book.objects.get(id=id)
-    is_book_exist = CartItem.objects.filter(book=book, cart=cart).exists()
+    is_book_exist = CartItem.objects.filter(book=book, cart=cart ).exists()
     if not is_book_exist:
         new_book = CartItem.objects.create(
             book=book,
