@@ -131,6 +131,10 @@ Quản lý sách trong thư viện
 |  Khoá ngoại  |  genre_id  |       Tham chiếu đến bảng category, là thể loại sách      |
 |              |publisher_id|  Tham chiếu đến bảng publisher đóng vai trò nhà xuất bản  |
 
+>**Bảng listbook_category và Bảng listbook_publisher**
+>
+
+Các bảng quản các thể loại và nhà xuất bản của thư viện
 
 >**Bảng user_cart_cart**
 >
