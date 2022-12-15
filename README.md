@@ -28,9 +28,8 @@
 |   3   |      Hồ Thu Giang      |  21020309  |   21020309@vnu.edu.vn   |
 
 ### 2. Thông tin web
-<a href="https://hnpyne.pythonanywhere.com/">
-  <h3 align="center">Link DEMO 🔗:</h3>
-</a>
+#### [LINK DEMO](https://hnpyne.pythonanywhere.com/)
+
 
 ## II. Các chức năng <a name="func"></a>
 
