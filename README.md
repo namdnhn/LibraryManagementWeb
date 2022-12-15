@@ -30,6 +30,11 @@
 ### 2. Thông tin web
 #### [LINK DEMO](https://hnpyne.pythonanywhere.com/)
 
+>**FRAMEWORK** 
+>
+[Bootstrap](https://getbootstrap.com/)
+
+[Django](https://www.djangoproject.com/)
 
 ## II. Các chức năng <a name="func"></a>
 
