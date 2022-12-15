@@ -19,7 +19,7 @@
 - Tên nhóm: 
 - Lớp: INT2211 24 - Cơ sở dữ liệu
 - Tên web: LibraryManagementWeb
-- Thành viên
+- Thành viên 💻:
 
 | Order |          Name          |     ID     |          Email          |
 | :---: |:----------------------:|:----------:|:-----------------------:|
