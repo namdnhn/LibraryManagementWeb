@@ -42,21 +42,13 @@
 > 
 
 - Home
-
 - Login
-
 - Signin
-
 - Thông tin người dùng
-
 - List sách
-
 - Thông tin sách
-
 - Kết quả tìm kiếm
-
 - Nội dung sách
-
 - Giỏ hàng
 
 
