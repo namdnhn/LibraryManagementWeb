@@ -230,11 +230,11 @@
                   nhân</a>
               </li>
               <li><a class="dropdown-item" href="{% url 'user_cart:cart_detail' %}">Giỏ sách</a></li>
-              <li><a class="dropdown-item" href="borrowed">Sách đã mượn</a></li>
+              <!--<li><a class="dropdown-item" href="borrowed">Sách đã mượn</a></li>-->
               <li>
                 <hr class="dropdown-divider">
               </li>
-              <li><a class="dropdown-item" href="logout/">Đăng xuất</a></li>
+              <li><a class="dropdown-item" href="{% url 'logout' %}">Đăng xuất</a></li>
             </ul>
           </li>
           {% else %}
@@ -326,9 +326,8 @@
                 <tr>
                   <td></td>
                   <td>
-                    <a href="{% url 'listbook:detailed-book' book.book.id %}">
                     <img src="{{book.book.img.url}}" width="120" height="130" class="hinhdaidien">
-                    </a>
+
                   </td>
 
                   <td>{{book.book.title}}</td>
