@@ -19,7 +19,7 @@
 - Tên nhóm: 
 - Lớp: INT2211 24 - Cơ sở dữ liệu
 - Tên web: LibraryManagementWeb
-- Thành viên 💻:
+- Thành viên 💻
 
 | Order |          Name          |     ID     |          Email          |
 | :---: |:----------------------:|:----------:|:-----------------------:|
@@ -27,6 +27,10 @@
 |   2   |    Đỗ Nhữ Hoàng Nam    |  21020126  |   21020126@vnu.edu.vn   |
 |   3   |      Hồ Thu Giang      |  21020309  |   21020309@vnu.edu.vn   |
 
+### 2. Thông tin web
+<a href="https://hnpyne.pythonanywhere.com/">
+  <h3 align="center">Link DEMO 🔗:</h3>
+</a>
 
 ## II. Các chức năng <a name="func"></a>
 
